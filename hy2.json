@@ -1,0 +1,28 @@
+{
+    "inbounds": [
+	    {
+            "type": "hysteria2",
+            "listen": "::",
+            "listen_port": 27017,
+            "ignore_client_bandwidth": false,
+            "users": [
+                {
+                    "password": ""
+                }
+            ],
+            "tls": {
+                "enabled": true,
+                "alpn": [
+                    "h3"
+                ],
+                "certificate_path": "/root/sing-box/ssl/ecc_certificate.crt",
+                "key_path": "/root/sing-box/ssl/ecc_private.key"
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct"
+        }
+    ]
+}
